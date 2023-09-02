@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Proveedor;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +15,13 @@ class ProveedorFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Proveedor::class;
+
     public function definition(): array
     {
         return [
-            //
+            'nombre' => $this->faker->company(),
+            'estado' => $this->faker->randomElement(['Activo', 'Inactivo'])
         ];
     }
 }

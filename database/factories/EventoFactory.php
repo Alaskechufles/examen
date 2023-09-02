@@ -17,7 +17,7 @@ class EventoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'tipo' => $this->faker->randomElement(['Activo', 'Inactivo', 'Cancelado']),
         ];
     }
 }
