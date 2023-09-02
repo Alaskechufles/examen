@@ -14,6 +14,10 @@ class CompraController extends Controller
     public function indexByID($id)
     {
         $buscarCompra = Compra::find($id);
+        $buscarCompra->proveedor;
+        $buscarCompra->empleado;
+        $buscarCompra->articulo;
+
 
         return $buscarCompra;
     }

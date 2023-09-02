@@ -14,6 +14,7 @@ class ClienteController extends Controller
     public function indexByID($id)
     {
         $buscarCliente = Cliente::find($id);
+        $buscarCliente->ventas;
 
         return $buscarCliente;
     }

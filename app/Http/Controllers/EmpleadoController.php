@@ -14,6 +14,8 @@ class EmpleadoController extends Controller
     public function indexByID($id)
     {
         $buscarEmpleado = Empleado::find($id);
+        $buscarEmpleado->ventas;
+        $buscarEmpleado->compras;
 
         return $buscarEmpleado;
     }

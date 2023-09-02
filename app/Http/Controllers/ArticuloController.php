@@ -14,6 +14,8 @@ class ArticuloController extends Controller
     public function indexByID($id)
     {
         $buscarArticulo = Articulo::find($id);
+        $buscarArticulo->ventas;
+        $buscarArticulo->compras;
         return $buscarArticulo;
     }
     public function create(Request $request)

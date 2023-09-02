@@ -14,6 +14,9 @@ class VentaController extends Controller
     public function indexByID($id)
     {
         $buscarVenta = Venta::find($id);
+        $buscarVenta->cliente;
+        $buscarVenta->empleado;
+        $buscarVenta->articulo;
 
         return $buscarVenta;
     }
