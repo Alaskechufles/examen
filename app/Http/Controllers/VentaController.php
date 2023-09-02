@@ -37,6 +37,6 @@ class VentaController extends Controller
         $modVenta->articulo_id = $request->articulo_id;
         $modVenta->save();
 
-        return "La venta ha sido creada";
+        return "La venta ha sido modificada";
     }
 }
